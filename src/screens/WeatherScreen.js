@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, StyleSheet, FlatList } from 'react-native'
+import { Text, View, ScrollView} from 'react-native'
 //my components
 import ImageBack from './components/ImageBack'
 import ButtonCity from './components/ButtonCity'
@@ -7,7 +7,6 @@ import Card from './components/Card'
 import Form from './Form'
 //key api weather
 const key = "13962ff312e85111e6b8e750d1c66783"
-// direccion de la API Weather https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22
 export default class WeatherScreen extends Component {
     state = {
         city: '',
@@ -45,9 +44,9 @@ export default class WeatherScreen extends Component {
                 })
             }).catch(error=> console.log(error))
     };
-
     render() {
         return (
+            <ScrollView>
             <ImageBack weather={this.state.weather} >
                 <Form
                     onChangeText={(city) => {
@@ -60,12 +59,17 @@ export default class WeatherScreen extends Component {
                             onPress={() => this.getWeather(item)}
                         />
                     )}
-                    // nameCity={this.state.city}
                 />
-                <View style={{ marginVertical: 40 }}>
-                    <Card temp={this.state.temp} humidity={this.state.humidity} description={this.state.description}/>
+                <View >
+                    <Card 
+                    temp={this.state.temp} 
+                    humidity={this.state.humidity} 
+                    description={this.state.description}
+                    city={this.state.city}
+                    />
                 </View>
             </ImageBack>
+            </ScrollView>
         )
     }
 }

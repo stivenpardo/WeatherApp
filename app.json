@@ -26,6 +26,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "App weather for search in the wherever  city",
+    "githubUrl": "https://github.com/stivenpardo/WeatherApp.git"
   }
 }

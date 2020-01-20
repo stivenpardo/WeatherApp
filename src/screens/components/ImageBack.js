@@ -7,6 +7,10 @@ import Winter from '../../../assets/img/winter.jpg'
 import Germany from '../../../assets/img/germany.jpg'
 import Berlín from '../../../assets/img/berlín.jpg'
 import Fog from '../../../assets/img/fog.jpg'
+import Moto from '../../../assets/img/Moto-plane.jpg'
+import Haze from '../../../assets/img/haze.jpg'
+
+
 
 export default function ImageBack(props) {
 
@@ -14,22 +18,18 @@ export default function ImageBack(props) {
         switch (weather) {
             case 'Rain':
                 return Rain;
-                break;
             case 'Clouds':
                 return Cloudy;
-                break;
             case 'Clear':
                 return Clear;
-                break;
             case 'snow':
                 return Winter;
-                break;
             case 'Fog':
                 return Fog;
-                break;
-            default:
-                return Berlín
-                break;
+            case 'Haze':
+                return Haze;
+                default:
+                return Moto
         }
     }
     return (

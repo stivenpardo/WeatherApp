@@ -10,7 +10,6 @@ export default function Form(props) {
                 placeholder='Digite la ciudad'
                 style={styles.input}
                 onChangeText={props.onChangeText}
-                // value={props.nameCity}
             />
             <FlatList
                 horizontal
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         width: '100%',
         marginVertical: 15,
-        padding: 10,
+        padding: 5,
         color: 'white',
         fontSize: 15,
         fontStyle: "italic"
